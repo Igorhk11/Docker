@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  ghost:
+    image: ghost:latest
+    container_name: ghost-container
+    ports:
+      - "3001:2368"
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+
+  lightstreamer:
+    image: lightstreamer:latest
+    container_name: ls-server
+    ports:
+      - "80:8080"
+    restart: unless-stopped
+

@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  lightstreamer:
+    image: lightstreamer:latest
+    container_name: ls-server
+    ports:
+      - "80:8080"
+    restart: unless-stopped
+
